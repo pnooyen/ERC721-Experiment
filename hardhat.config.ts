@@ -50,7 +50,7 @@ function getChainConfig(network: keyof typeof chainIds): NetworkUserConfig {
 }
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "ganache",
   gasReporter: {
     currency: "USD",
     enabled: process.env.REPORT_GAS ? true : false,
@@ -68,6 +68,9 @@ const config: HardhatUserConfig = {
     kovan: getChainConfig("kovan"),
     rinkeby: getChainConfig("rinkeby"),
     ropsten: getChainConfig("ropsten"),
+    ganache: {
+      url: "http://127.0.0.1:7545"
+    }
   },
   paths: {
     artifacts: "./artifacts",
