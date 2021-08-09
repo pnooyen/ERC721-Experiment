@@ -69,8 +69,8 @@ const config: HardhatUserConfig = {
     rinkeby: getChainConfig("rinkeby"),
     ropsten: getChainConfig("ropsten"),
     ganache: {
-      url: "http://127.0.0.1:7545"
-    }
+      url: "http://127.0.0.1:75451",
+    },
   },
   paths: {
     artifacts: "./artifacts",
